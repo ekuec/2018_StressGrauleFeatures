@@ -1,2 +1,2 @@
-# 2018_StressGrauleFeatures
+# 2019_StressGraunleFeatures
 Repository to host MaGS Predictor Scripts
