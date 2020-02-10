@@ -1,0 +1,63 @@
+Script used to parameterize MaGS in R (R version 3.6.0 (2019-04-26) -- "Planting of a Tree")
+
+requires libraries:
+pROC
+MASS
+PRROC
+
+and associated files found in this folder:
+human_pme.data
+nsg_human.txt
+human_ncyto.txt
+human_nucleus.txt
+human_nucleolus.txt
+human_RNPgranule.txt
+human_pbody.txt
+human_llps.txt
+gingras_gold.txt
+
+where *.txt files are single column lists of uniprot IDs for proteins in sets of interest. nsg_human.txt contains the human SGome at time of submission. Other lists are control groups and can be altered as desired.  human_pme.data is a metafile to contain the protein features used. It is a tab separated file with columns for:
+
+uniprot_ID
+percent disorder (DISOPRED3)
+protein abundance (paxdb)
+protein solubility (Camsol)
+binary interactions (PCA+Y2H+APMS)
+sequence length
+Largest IDR (>=30AA)
+Number annotated Phosphoylation Sites
+Pi-Pi interaction score (Pscore)
+RNA binding
+Number of Morfs
+Number of LCR (fLPS)
+Catgranule Score
+Percent composition A 
+Percent composition C 
+Percent composition D 
+Percent composition E 
+Percent composition F 
+Percent composition G 
+Percent composition H 
+Percent composition I 
+Percent composition K 
+Percent composition L 
+Percent composition M 
+Percent composition N 
+Percent composition P 
+Percent composition Q 
+Percent composition R 
+Percent composition S 
+Percent composition T 
+Percent composition V 
+Percent composition W 
+Percent composition Y
+
+See manuscript for citations for calculated and referenced data. Will produce output files:
+
+mags_rawscore.tsv
+mags_set_test.tsv
+mags_set_train.tsv
+mags_set_valid.tsv
+mags_zscore.tsv
+out_model.tsv
+
